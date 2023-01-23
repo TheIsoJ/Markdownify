@@ -28,5 +28,5 @@ jobs:
       with:
         context: .
         push: true
-        tags: ghcr.io/testausserveri/testausapis
+        tags: ghcr.io/theisoj/markdownify-backend
       
