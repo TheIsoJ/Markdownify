@@ -1,0 +1,32 @@
+{
+  "name": "markdownify-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "devStart": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheIsoJ/Markdownify-backend.git"
+  },
+  "author": "Jesse Keskelä",
+  "bugs": {
+    "url": "https://github.com/TheIsoJ/Markdownify-backend/issues"
+  },
+  "homepage": "https://github.com/TheIsoJ/Markdownify-backend#readme",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "prisma": "^4.9.0"
+  },
+  "dependencies": {
+    "@fastify/cors": "^8.2.0",
+    "@fastify/sensible": "^5.2.0",
+    "dotenv": "^16.0.3",
+    "fastify": "^4.12.0"
+  }
+}

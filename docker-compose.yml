@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  markdownify-api:
+    build:
+      context: .
+      network: host
+    image: ghcr.io/theisoj/markdownify-backend
+    restart: unless-stopped
+    depends_on:
+      - markdownify_postgres
+    env_file:
+      - .env
+    ports:
+      - "8080:5000"
+    links:
+      - markdownify_postgres
+    volumes:
+      - ./media:/usr/share/app/media
+  markdownify_postgres:
+    container_name: markdownify_postgres
+    restart: unless-stopped
+    image: postgres
+    volumes:
+      - ./data:/data/db
+    ports:
+      - "5432:5432"
+    hostname: postgres
+    environment:
+      P0STGRES_PASSWORD: salasana
+      P0STGRES_DB: markdownify
